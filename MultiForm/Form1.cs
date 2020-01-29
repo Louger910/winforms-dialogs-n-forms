@@ -12,9 +12,20 @@ namespace MultiForm
 {
     public partial class Form1 : Form
     {
+        public delegate void OnResult(Dictionary<string, object> resultArgs);
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void signInButton_Click(object sender, EventArgs e)
+        {
+            SignInForm signInForm = new SignInForm((resultArgs) => {
+                this.passwordLabel.Text = resultArgs["password"] as string;
+            });
+
+            signInForm.ShowDialog();
         }
     }
 }

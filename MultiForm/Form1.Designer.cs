@@ -33,6 +33,7 @@
             this.goodsListBox = new System.Windows.Forms.ListBox();
             this.addGoodButton = new System.Windows.Forms.Button();
             this.editGoodButton = new System.Windows.Forms.Button();
+            this.deleteGoodButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // signInButton
@@ -81,11 +82,22 @@
             this.editGoodButton.UseVisualStyleBackColor = true;
             this.editGoodButton.Click += new System.EventHandler(this.editGoodButton_Click);
             // 
+            // deleteGoodButton
+            // 
+            this.deleteGoodButton.Location = new System.Drawing.Point(495, 43);
+            this.deleteGoodButton.Name = "deleteGoodButton";
+            this.deleteGoodButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteGoodButton.TabIndex = 5;
+            this.deleteGoodButton.Text = "Delete";
+            this.deleteGoodButton.UseVisualStyleBackColor = true;
+            this.deleteGoodButton.Click += new System.EventHandler(this.DeleteGoodButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deleteGoodButton);
             this.Controls.Add(this.editGoodButton);
             this.Controls.Add(this.addGoodButton);
             this.Controls.Add(this.goodsListBox);
@@ -105,6 +117,7 @@
         private System.Windows.Forms.ListBox goodsListBox;
         private System.Windows.Forms.Button addGoodButton;
         private System.Windows.Forms.Button editGoodButton;
+        private System.Windows.Forms.Button deleteGoodButton;
     }
 }
 

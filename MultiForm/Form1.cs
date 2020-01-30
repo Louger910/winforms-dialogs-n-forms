@@ -59,5 +59,11 @@ namespace MultiForm
             GoodForm goodForm = new GoodForm() { CurrentMode = GoodForm.Mode.Edit };
             goodForm.ShowDialog();
         }
+
+        private void DeleteGoodButton_Click(object sender, EventArgs e)
+        {
+            DeleteForm deleteForm = new DeleteForm();
+            deleteForm.ShowDialog();
+        }
     }
 }

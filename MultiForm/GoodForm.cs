@@ -58,7 +58,7 @@ namespace MultiForm
                 // Form1.GoodsModel.OnListChanged(new ListChangedEventArgs(ListChangedType.ItemChanged, Form1.GoodsModel.IndexOf(CurentGood)));
                 Form1.GoodsModel.ResetBindings();
             }
-            
+
             DialogResult = DialogResult.OK;
         }
 

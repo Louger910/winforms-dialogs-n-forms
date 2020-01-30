@@ -13,19 +13,18 @@ namespace MultiForm
 {
     public partial class SignInForm : Form
     {
-        private OnResult onResultCallback;
-        public SignInForm(OnResult onResultCallback)
+        public OnResult OnResultCallback { set; private get; }
+        public SignInForm()
         {
             InitializeComponent();
-            this.onResultCallback = onResultCallback;
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> resultArgs = new Dictionary<string, object>();
             resultArgs["password"] = passwordTextBox.Text;
-            onResultCallback(resultArgs);
-            DialogResult = DialogResult.OK;
+            //DialogResult = DialogResult.OK;
+            OnResultCallback(resultArgs);
         }
     }
 }

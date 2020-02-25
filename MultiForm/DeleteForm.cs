@@ -21,7 +21,9 @@ namespace MultiForm
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            Form1.GoodsModel.RemoveAt()
+            Form1.GoodsModel.RemoveAt(selected-1);
+            selected++;
+            //Form1.GoodsModel.RemoveAt()
             DialogResult = DialogResult.OK;
         }
 
